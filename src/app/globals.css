@@ -2,5 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .bg-theme-transition {
+      transition: background-color 0.3s ease; 
+    }
+}
+
+[data-theme='dark'] {
+    background: #291e28;
+}
+
+[data-theme='light'] {
+    background:pink;
+}
+
 
 

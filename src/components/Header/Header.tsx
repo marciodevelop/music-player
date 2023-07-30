@@ -4,8 +4,8 @@ import { ThemeSwitcher } from '../ThemeSwitcher';
 export const Header = (): React.ReactElement => {
   
   return (
-    <div>
+    <header className="fixed top-0">
       <ThemeSwitcher />
-    </div>
+    </header>
   );
 }
