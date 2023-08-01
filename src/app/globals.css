@@ -3,18 +3,26 @@
 @tailwind utilities;
 
 @layer utilities {
-    .bg-theme-transition {
-      transition: background-color 0.3s ease; 
-    }
+  .bg-theme-transition {
+    transition: background-color 0.3s ease;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 141, 181, 0.2);
+  opacity: 0.2;
+  max-height: 20%;
+  border-radius: 10px 0 0 10px;
 }
 
 [data-theme='dark'] {
-    background: #291e28;
+  background: #291e28;
 }
 
 [data-theme='light'] {
-    background:pink;
+  background: pink;
 }
-
-
-
