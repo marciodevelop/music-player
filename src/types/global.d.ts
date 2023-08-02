@@ -17,20 +17,23 @@ declare module IMusicPlayer {
     items: Track[];
   };
 
+  type objectTrack = {
+    id: string;
+    duration_ms: number;
+    name: string;
+    preview_url: string;
+    artists: Artists[];
+    album: albumTrack;
+  }
+
   interface CurrentTrackStore {
-    currentTrack: HTMLAudioElement;
-    setCurrentTrack: (param: HTMLAudioElement | null) => void
+    currentTrackRef: HTMLAudioElement | string;
+    currentTrackInfos: Track;
+    setCurrentTrack: (ref: HTMLAudioElement | null, info: objectTrack) => void
   }
 
   interface Track {
-    track: {
-      id: string;
-      duration_ms: number;
-      name: string;
-      preview_url: string;
-      artists: Artists[];
-      album: albumTrack;
-    }
+    track: objectTrack;
   }
 
   interface Playlist {

@@ -2,7 +2,8 @@
 import { create } from "zustand"
 
 export const useCurrentTrack = create<IMusicPlayer.CurrentTrackStore>((set) => ({
-  currentTrack: "",
-  setCurrentTrack: (newTrack: string): void => set({ currentTrack:  newTrack})
+  currentTrackRef: "",
+  currentTrackInfos: {},
+  setCurrentTrack: (newTrackRef: string, newTrackInfos: IMusicPlayer.objectTrack) => set({ currentTrackRef:  newTrackRef, currentTrackInfos: newTrackInfos })
 }))
 
