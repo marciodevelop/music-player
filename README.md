@@ -16,7 +16,7 @@ Siga os passos abaixo para instalar e executar o projeto em sua máquina local:
 1. **Clone o repositório**
 
    Abra o terminal e execute o seguinte comando:
-   git clone https://github.com/seu-usuario/music-app.git
+   git clone https://github.com/marciodevelop/music-player.git
 
 2. **Acesse o diretório**
 
