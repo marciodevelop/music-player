@@ -7,7 +7,7 @@ import { useAudioRefList } from "@/app/store";
 import { CardMusic } from "@/components/CardMusic";
 
 export const CardList = (): React.ReactElement => {
-  const [playlist, setPlayList] = useState<IMusicPlayer.Playlist>({ tracks: { items: [] } });
+  const [playlist, setPlayList] = useState<IMusicPlayer.Playlist>({ tracks: { items: [] }, id: '', name: '' });
   const { setAudioRefList } = useAudioRefList((state) => state);
 
   const audioRef = useRef<HTMLAudioElement[]>([]);
@@ -15,7 +15,7 @@ export const CardList = (): React.ReactElement => {
   const handleList = () => {
     apiBase.get(`playlists/5VhUPmOwSNuj1ZShpIdKbK`).then(response => {
       const itemsValid = response.data.tracks.items.filter((item: IMusicPlayer.Track) => item.track.preview_url);
-      setPlayList({ tracks: { items: itemsValid } });
+      setPlayList({ tracks: { items: itemsValid }, id: "", name: response.data.name });
     }).catch(error => {
       throw new Error(error);
     })
