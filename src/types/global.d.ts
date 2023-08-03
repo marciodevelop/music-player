@@ -28,8 +28,12 @@ declare module IMusicPlayer {
 
   interface CurrentTrackStore {
     currentTrackRef: HTMLAudioElement | string;
-    currentTrackInfos: Track;
-    setCurrentTrack: (ref: HTMLAudioElement | null, info: objectTrack) => void
+    currentTrackInfos: objectTrack;
+    setCurrentTrack: (ref: HTMLAudioElement | string, info: objectTrack) => void;
+    paused: boolean;
+    setPaused: (paused: boolean) => void;
+    action: string;
+    setAction: (action: string) => void
   }
 
   interface Track {

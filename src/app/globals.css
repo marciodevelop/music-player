@@ -8,6 +8,37 @@
   }
 }
 
+input[type="range"]::-webkit-slider-runnable-track {
+  /* background: linear-gradient(
+    to right,
+    rgba(255, 154, 69, 0.42) 0%,
+    rgba(255, 154, 69, 0.42) calc((100% - 16px) * (5 / 10) + 8px),
+    transparent calc((100% - 16px) * (5 / 10) + 8px)
+  ); */
+  background-color: pink;
+  height: 5px;
+  border-radius: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 8px;
+  height: 8px;
+  background-color:#FF7E3A;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  top: -1px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 8px;
+  height: 8px;
+  background-color:#FF7E3A;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }

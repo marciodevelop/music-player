@@ -37,12 +37,12 @@ export const ThemeSwitcher = (): React.ReactElement | null => {
           </svg>
         </span>
 
-        <div className={`${isActive ? 'bg-blue-700' : ''} w-14 h-7 flex items-center bg-gray-300 rounded-full mx-3 px-1`} onClick={handleToggleActive}>
+        <div className={`${!isActive ? 'bg-dark-gray-70' : 'bg-dark-black-30'} w-14 h-7 flex items-center bg-gray-300 rounded-full mx-3 px-1`} onClick={handleToggleActive}>
           <div className={`${isActive ? 'translate-x-7' : ''} bg-white w-5 h-5 rounded-full shadow-md transform`}></div>
         </div>
 
         <span>
-          <svg className={`h-6 w-6 text-gray-400 ${isActive ? 'opacity-1' : 'opacity-[0.2]'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className={`h-6 w-6 text-gray-400 ${!isActive ? 'opacity-1' : 'opacity-[0.2]'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         </span>
